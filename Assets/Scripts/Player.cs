@@ -17,21 +17,21 @@ public class Player : MonoBehaviour {
     }
 
     private void Update() {
-        _thrusting = Input.GetKey(KeyCode.W);
+        _thrusting = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
 
-        if (Input.GetKey(KeyCode.A)) {
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
             _turnDirection = 1.0f;
-        } else if (Input.GetKey(KeyCode.D)) {
+        } else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
             _turnDirection = -1.0f;
         } else {
             _turnDirection = 0.0f;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)) {
             Shoot();
         }
 
-        if (Input.GetKeyDown(KeyCode.W)) {
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
             FindObjectOfType<AudioManager>().Play("Engine");
         }
     }
