@@ -6,3 +6,7 @@ This is a game inspired by the asteroids arcade game, updated with new assets, s
 Feel free to play around, and consider leaving some feedback! I'm learning how to better make games in Unity, so any feedback is always helpful!
 
 ![Asteroids Screenshot](Screenshot.png)
+
+Controls:
+- Move: WASD - or - Arrow Keys
+- Shoot: Space Bar - or - Left Mouse Button
